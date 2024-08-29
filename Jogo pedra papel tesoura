@@ -1,0 +1,47 @@
+from random import randint
+import time
+itens= ['Pedra','Papel','Tesoura']
+computador= randint(0,2)
+print('*' * 20)
+print('[0] PEDRA')
+print('[1] PAPEL')
+print('[2] TESOURA')
+jogo=int(input('Qual sua jogada?: '))
+print('*' * 20)
+print('JO')
+time.sleep(1)
+print('KEN')
+time.sleep(1)
+print('PO')
+time.sleep(1)
+print('-=' * 20)
+print('Você jogou {}'.format(itens[computador]))
+print('O computador jogou {}'.format(itens[computador]))
+print('-=' * 20)
+if(computador == 0): #jogou pedra
+    if(jogo == 0):
+        print('EMPATOU')
+    elif(jogo == 1):
+        print('JOGADOR VENCE')
+    elif(jogo == 2):
+        print('JOGO PERDE')
+    elif(jogo >2):
+         print('Escolhas as opções válidas entre 0 e 2')
+elif(computador == 1): #jogou papel
+    if(jogo == 0):
+        print('JOGADOR PERDE')
+elif(jogo == 1):
+        print('JOGADOR EMPATA')
+elif(jogo == 2):
+        print('JOGO VENCE')
+elif(jogo >2):
+        print('Escolha as opções válidas entre 0 e 2') #jogou tesoura
+if(computador == 2):
+    if(jogo == 0):
+        print('JOGADOR PERDE')
+elif(jogo == 1):
+        print('JOGADOR VENCE')
+elif(jogo == 2):
+        print('JOGO EMPATA')
+elif(jogo >2):
+      print('Escolha uma opção válida entre 0 e 2')
